@@ -18,7 +18,7 @@ server {
   ssl_certificate <%= @resource.ssl_certificate %>;
   ssl_certificate_key <%= @resource.ssl_certificate_key %>;
 
-  <%= if @resource.redirect_ssl_test %>
+  <% if @resource.redirect_ssl_test %>
   if (<%= @resource.redirect_ssl_test %>) {
     return 301 https://$host$request_uri;
   }
