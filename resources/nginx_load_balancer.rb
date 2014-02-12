@@ -32,3 +32,4 @@ attribute :static_files, :kind_of => Hash, :default => {}
 attribute :ssl, :kind_of => [ TrueClass, FalseClass ], :default => false
 attribute :ssl_certificate, :kind_of => String, :default => "#{node['fqdn']}.crt"
 attribute :ssl_certificate_key, :kind_of => String, :default => "#{node['fqdn']}.key"
+attribute :redirect_ssl_test, :kind_of => [String, NilClass], :default => nil
