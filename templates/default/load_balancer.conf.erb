@@ -18,9 +18,9 @@ server {
   ssl_certificate <%= @resource.ssl_certificate %>;
   ssl_certificate_key <%= @resource.ssl_certificate_key %>;
 
-  if ($http_x_forwarded_proto = 'http') {
-    return 301 https://$host$request_uri;
-  }
+  # if ($http_x_forwarded_proto = 'http') {
+  return 301 https://$host$request_uri;
+  # }
   <% end %>
   <% @resource.static_files.each do |url, path| %>
   location <%= url %> {
