@@ -14,7 +14,6 @@ server {
   server_name <%= @resource.server_name.is_a?(Array) ? @resource.server_name.join(' ') : @resource.server_name %>;
   <% if @resource.ssl %>
   listen 443 ssl;
-  ssl on;
   ssl_certificate <%= @resource.ssl_certificate %>;
   ssl_certificate_key <%= @resource.ssl_certificate_key %>;
 
